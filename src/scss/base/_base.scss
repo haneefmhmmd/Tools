@@ -1,0 +1,52 @@
+
+  input:focus{
+    outline:none;
+  }
+  .row{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .container{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  //grid for mobile 
+  @include grid(".col_");
+
+  //grid for tablets
+  @include mQ(768px){
+    @include grid(".col_md_");
+  }
+
+  //grid for laptop
+  @include mQ(980px){
+    @include grid(".col_lg_");
+  }
+  //large laptops
+  @include mQ(1245px){
+    @include grid(".col_xl_");
+  }
+
+
+
+  .wrapper{
+    height: 100vh;
+    box-sizing: border-box;
+    overflow-y: hidden;
+    background-color: white;
+  }
+
+  .hide{
+    display: none !important;
+  }
+
+  .placeHolderELement{
+    text-align: center;
+    margin-top: 200px;
+    font-size: 30px;
+    font-weight: bold;
+  }
